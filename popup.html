@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Testudy-fuck</title><link rel="stylesheet" href="popup.css"></head>
+<body><header><img class="mark" src="icon.png" alt=""><div><h1>Testudy-fuck</h1></div><span id="badge">停止中</span></header>
+<main><p id="status" role="status">DigCBTのページを確認しています。</p><button id="toggle" disabled>開始</button>
+<div class="settings"><label for="delay">操作間隔 <output id="delayLabel">1.2秒</output></label><input id="delay" type="range" min="500" max="5000" step="100" value="1200">
+<label><input id="autoStart" type="checkbox" checked> 練習の開始ボタンを押す</label><label><input id="autoNextSet" type="checkbox" checked> 練習結果から次へ進む（最終成績で停止）</label>
+<label><input id="naturalTiming" type="checkbox" checked> 問題を読む間を取り、録音の長さに幅を持たせる</label>
+<label><input id="speechNoise" type="checkbox" checked> 発話評価に生成した雑音を送信</label>
+<label for="noiseStyle">雑音の種類 <select id="noiseStyle"><option value="rustle">ざわつき（標準）</option><option value="continuous">連続ざわつき（比較用）</option><option value="taps">打音（従来）</option></select></label>
+<label for="noiseSeconds">生成音声の長さ（目安、秒） <input id="noiseSeconds" type="number" min="3" max="20" step="1" value="8"></label><p id="saved" aria-live="polite"></p></div>
+<p class="note">生成音声はMicrosoftの音声評価APIに送信されます。雑音の生成に実マイクは使用せず、スピーカーからも再生しません。採点結果によっては不合格になります。</p>
+<details><summary>最近の操作</summary><ol id="logs"></ol></details></main><script src="popup.js"></script></body></html>

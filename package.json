@@ -1,0 +1,28 @@
+{
+  "name": "testudy-fuck",
+  "version": "0.5.2",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/*.test.cjs",
+    "analyze:har": "node scripts/analyze-har.cjs",
+    "package": "python scripts/package.py",
+    "check": "node scripts/check.cjs"
+  },
+  "devDependencies": {
+    "jsdom": "^26.1.0"
+  },
+  "description": "Testudy-fuck Chrome extension for DigCBT",
+  "license": "GPL-3.0-or-later",
+  "author": "b4mbo-o",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/b4mbo-o/testudy-fuck.git"
+  },
+  "homepage": "https://github.com/b4mbo-o/testudy-fuck#readme",
+  "bugs": {
+    "url": "https://github.com/b4mbo-o/testudy-fuck/issues"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

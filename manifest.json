@@ -1,0 +1,54 @@
+{
+  "manifest_version": 3,
+  "name": "Testudy-fuck",
+  "version": "0.5.2",
+  "description": "DigCBTの回答入力・採点・次の問題への移動を自動操作します。",
+  "permissions": [
+    "storage",
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://www.digcbt.com/dig/studyTest2/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Testudy-fuck",
+    "default_icon": {
+      "16": "icon.png",
+      "32": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.digcbt.com/dig/studyTest2/pages/speechEvaluation.php*"
+      ],
+      "js": [
+        "speech-noise.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "https://www.digcbt.com/dig/studyTest2/pages/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}

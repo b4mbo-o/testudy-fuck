@@ -1,0 +1,16 @@
+node_modules/
+.analysis/
+dist/
+audio-preview/
+private/
+*.har
+*.har.*
+*.zip
+*.log
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
